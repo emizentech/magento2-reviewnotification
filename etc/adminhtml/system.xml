@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+       <tab id="emizentech" translate="label" sortOrder="100">
+            <label>Emizen Tech</label>
+        </tab>
+        <section id="reviewnotification" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Reviewnotification Configuration</label>
+            <tab>emizentech</tab>
+            <resource>Emizentech_Reviewnotification::reviewnotification_config</resource>
+            <group id="active_display" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Reviewnotification Configuration</label>
+                <field id="scope" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send Notification</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                     <comment>Email alert will be send to below email address when new review posted</comment>
+                </field>
+                <field id="emailto" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Receiver Email</label>
+                </field>
+             	 <field id="nameto" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Receiver Name</label>
+                </field>
+                 <field id="sender_email_identity" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                 <field id="email_template" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Template</label>
+                    <comment>Email template chosen based on theme fallback when "Default" option is selected.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+			</group>
+        </section>
+    </system>
+</config>

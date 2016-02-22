@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Email/etc/email_templates.xsd">
+<template id="reviewnotification_active_display_email_template" label="Email Form" file="send_form.html" type="text" module="Emizentech_Reviewnotification" area="frontend"/>
+</config>

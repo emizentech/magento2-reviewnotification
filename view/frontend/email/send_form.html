@@ -1,0 +1,11 @@
+<!--@subject New product review Submitted @-->
+<!--@vars {
+"var data.detail":"Comment",
+"var data.nickname":"Sender Name",
+"var data.productname":"Product Name"
+} @-->
+{{trans "Product: %productname" productname=$data.productname}}
+{{trans "Name: %nickname" nickname=$data.nickname}}
+{{trans "Title: %title" title=$data.title}}
+
+{{trans "Comment: %detail" detail=$data.detail}}
